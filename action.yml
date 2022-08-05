@@ -1,8 +1,8 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Just run the scripts & don't ask questions'
+description: 'Run a set of npm scripts'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  scripts:  # id of input
+    description: 'npm scripts to run'
     required: true
     default: 'World'
 outputs:
@@ -10,4 +10,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'node16'
-  main: 'index.ts'
+  main: 'dist/index.js'

@@ -6,7 +6,7 @@ const stages : string[] = ['npm install','npm run test','npm run lint','npm run 
 async function run() {
     stages.forEach(stage => {
         runTask(stage)
-    });    
+    });
 }
 
 function runTask(operation: string) {
