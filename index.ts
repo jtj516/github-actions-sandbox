@@ -3,7 +3,12 @@ import { exec } from '@actions/exec'
 
 
 async function run() {
-    const scripts: string[] = core.getInput('scripts')!.split(',')
+    let scriptArg = core.getInput('scripts')
+    if (scriptArg === '') {
+        core.setFailed("no scripts selected")
+        return
+    }
+    const scripts: string[] = scriptArg.split(',')
     scripts.forEach(script => {
         runScript(script)
     });

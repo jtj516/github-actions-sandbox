@@ -4,10 +4,8 @@ inputs:
   scripts:
     description: 'npm scripts to run'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+    default: 'lint'
+
 runs:
   using: 'node16'
   main: 'dist/index.js'
