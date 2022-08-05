@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run the scripts and don't ask questions
-        uses: jtj516/github-actions-sandbox@v0.0.1
+        uses: jtj516/github-actions-sandbox
         id: hello
         with:
           scripts: 'Mona the Octocat'

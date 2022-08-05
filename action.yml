@@ -1,7 +1,7 @@
 name: 'Just run the scripts & don't ask questions'
 description: 'Run a set of npm scripts'
 inputs:
-  scripts:  # id of input
+  scripts:
     description: 'npm scripts to run'
     required: true
     default: 'World'
