@@ -11,7 +11,7 @@ async function run() {
     }
     const scripts: string[] = scriptArg.split(',')
     scripts.forEach(script => {
-        runScript(`${prefixArg}${script}`)
+        runScript(`${prefixArg} ${script}`)
     });
 }
 

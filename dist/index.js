@@ -34,7 +34,7 @@ async function run() {
     }
     const scripts = scriptArg.split(',');
     scripts.forEach(script => {
-        runScript(`${prefixArg}${script}`);
+        runScript(`${prefixArg} ${script}`);
     });
 }
 function runScript(operation) {
