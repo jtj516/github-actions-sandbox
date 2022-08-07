@@ -5,6 +5,8 @@ inputs:
     description: 'npm scripts to run'
     required: true
     default: 'npm run build, npm run lint'
+  prefix:
+    required: false
 runs:
   using: 'node16'
   main: 'dist/index.js'

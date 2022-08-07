@@ -27,13 +27,14 @@ const core = __importStar(require("@actions/core"));
 const exec_1 = require("@actions/exec");
 async function run() {
     let scriptArg = core.getInput('scripts');
+    let prefixArg = core.getInput('prefix');
     if (scriptArg === '') {
         core.setFailed("no scripts selected");
         return;
     }
     const scripts = scriptArg.split(',');
     scripts.forEach(script => {
-        runScript(script);
+        runScript(`${prefixArg}${script}`);
     });
 }
 function runScript(operation) {

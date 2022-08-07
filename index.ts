@@ -4,13 +4,14 @@ import { exec } from '@actions/exec'
 
 async function run() {
     let scriptArg = core.getInput('scripts')
+    let prefixArg = core.getInput('prefix')
     if (scriptArg === '') {
         core.setFailed("no scripts selected")
         return
     }
     const scripts: string[] = scriptArg.split(',')
     scripts.forEach(script => {
-        runScript(script)
+        runScript(`${prefixArg}${script}`)
     });
 }
 
