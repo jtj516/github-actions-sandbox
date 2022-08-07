@@ -5,10 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+            node-version: 16
+            registry-url: https://registry.npmjs.org/
       #- name: Checkout
       #  uses: actions/checkout@v3
       - name: Run the scripts and don't ask questions
-        uses: jtj516/github-actions-sandbox@v0.0.6
+        uses: jtj516/github-actions-sandbox@v0.0.7
         id: hello
         with:
           scripts: 'Mona the Octocat'
