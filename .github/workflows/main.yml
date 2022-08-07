@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to run scripts & not ask questions
     steps:
       #- name: setup node
       #  uses: actions/setup-node@v1
@@ -17,5 +17,8 @@ jobs:
       - name: Run the scripts and don't ask questions
         uses: jtj516/github-actions-sandbox@v0.0.13
         id: hello
+        with:
+          scripts: 'npm run build, npm run lint'
+
       - name: Get the output time
         run: echo "The time was "
