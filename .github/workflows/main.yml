@@ -15,7 +15,7 @@ jobs:
       #- name: install
       #  run: npm install
       - name: Run the scripts and don't ask questions
-        uses: jtj516/github-actions-sandbox@v0.0.13
+        uses: jtj516/github-actions-sandbox@v0.0.14
         id: hello
         with:
           scripts: 'npm run build, npm run lint'
