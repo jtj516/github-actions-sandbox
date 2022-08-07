@@ -20,5 +20,8 @@
   "engines": {
     "node": "^16",
     "npm": "^8"
+  },
+  "devDependencies": {
+    "xo": "^0.51.0"
   }
 }
