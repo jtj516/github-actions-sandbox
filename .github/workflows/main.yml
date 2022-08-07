@@ -12,8 +12,12 @@ jobs:
             registry-url: https://registry.npmjs.org/
       #- name: Checkout
       #  uses: actions/checkout@v3
+      - name: install
+        run: npm install
       - name: Run the scripts and don't ask questions
-        uses: jtj516/github-actions-sandbox@v0.0.7
+        uses: jtj516/github-actions-sandbox@v0.0.8
         id: hello
         with:
-          scripts: 'Mona the Octocat'
+          scripts: 'lint'
+      - name: Get the output time
+        run: echo "The time was "
