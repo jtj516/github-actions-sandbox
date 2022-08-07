@@ -3,7 +3,6 @@ import { exec } from '@actions/exec'
 
 
 async function run() {
-    core.setOutput('gg', "fuck you")
     let scriptArg = core.getInput('scripts')
     if (scriptArg === '') {
         core.setFailed("no scripts selected")

@@ -1,7 +1,7 @@
-name: 'Just run the scripts & don't ask questions'
+name: 'Just run the scripts & dont ask questions'
 description: 'Run a set of npm scripts'
 inputs:
-  scripts:
+  scripts: 1
     description: 'npm scripts to run'
     required: true
     default: 'lint'
