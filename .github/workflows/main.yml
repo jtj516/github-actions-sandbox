@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to run scripts & not ask questions
     steps:
-      #- name: setup node
-      #  uses: actions/setup-node@v1
-      #  with:
-      #      node-version: 16
-      #      registry-url: https://registry.npmjs.org/
-      #- name: Checkout
-      #  uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+            node-version: 16
+            registry-url: https://registry.npmjs.org/
+      - name: Checkout
+        uses: actions/checkout@v3
       #- name: install
       #  run: npm install
       - name: Run the scripts and don't ask questions
