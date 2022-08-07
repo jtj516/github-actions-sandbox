@@ -15,9 +15,7 @@ jobs:
       #- name: install
       #  run: npm install
       - name: Run the scripts and don't ask questions
-        uses: jtj516/github-actions-sandbox@v0.0.10
+        uses: jtj516/github-actions-sandbox@v0.0.2
         id: hello
-        with:
-          scripts: 'lint'
       - name: Get the output time
         run: echo "The time was "

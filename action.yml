@@ -1,10 +1,5 @@
 name: 'Just run the scripts & dont ask questions'
 description: 'Run a set of npm scripts'
-inputs:
-  scripts:
-  description: 'npm scripts to run'
-  required: true
-  default: 'lint'
 runs:
   using: 'node16'
   main: 'dist/index.js'
